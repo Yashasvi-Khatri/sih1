@@ -1,0 +1,304 @@
+/* General Reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* Header */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #2b542c;
+    color: #fff;
+}
+
+.logo-container .logo {
+    height: 50px;
+}
+
+.header-options {
+    display: flex;
+    align-items: center;
+}
+
+#language-selector {
+    margin-right: 20px;
+    padding: 5px;
+}
+
+#login-button {
+    padding: 5px 10px;
+    background-color: #fff;
+    color: #2b542c;
+    border: none;
+    cursor: pointer;
+}
+
+/* Navbar */
+nav {
+    background-color: #3c763d;
+    padding: 10px;
+}
+
+.nav-list {
+    display: flex;
+    list-style-type: none;
+    justify-content: center;
+}
+
+.nav-list li {
+    margin: 0 15px;
+}
+
+.nav-list li a {
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Sections */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+h2 {
+    color: #2b542c;
+    margin-bottom: 20px;
+}
+
+/* About Section */
+#about {
+    background-image: url(https://i.postimg.cc/3JzDnGnv/sihback.jpg);
+    background-color: #f9f9f9;
+    padding: 40px 0;
+}
+
+#about p {
+    font-size: 16px;
+    line-height: 1.6;
+}
+/* Filter Section */
+#filter-section {
+    padding: 40px 20px;
+    background-color: #f8f8f8;
+    text-align: center;
+}
+
+#filter-section h2 {
+    margin-bottom: 20px;
+    font-size: 28px;
+    color: #2b542c;
+}
+
+.filter-container {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.filter-item {
+    position: relative;
+    width: 200px;
+}
+
+.filter-btn {
+    background-color: #2b542c;
+    color: #fff;
+    padding: 10px 15px;
+    border: none;
+    cursor: pointer;
+    width: 100%;
+    text-align: left;
+    border-radius: 5px;
+    font-size: 16px;
+}
+
+.filter-btn:after {
+    content: '\25BC'; /* Down arrow */
+    float: right;
+    margin-left: 10px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f1f1f1;
+    box-shadow: 0px 8px 16px rgba(0, 0, 0, 0.1);
+    z-index: 1;
+    width: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 10px 15px;
+    text-decoration: none;
+    display: block;
+    border-bottom: 1px solid #ddd;
+}
+
+.dropdown-content a:last-child {
+    border-bottom: none;
+}
+
+.dropdown-content a:hover {
+    background-color: #ddd;
+}
+
+.show {
+    display: block;
+}
+
+/* Features Section */
+#features {
+    background-color: #fff;
+    padding: 40px 0;
+}
+
+.feature-grid {
+    display: flex;
+    gap: 20px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.feature {
+    background-color: #dff0d8;
+    padding: 20px;
+    border-radius: 5px;
+    width: calc(33.333% - 40px);
+    box-sizing: border-box;
+}
+
+.feature h3 {
+    margin-bottom: 10px;
+}
+
+.feature p {
+    font-size: 14px;
+    line-height: 1.4;
+}
+
+@media (max-width: 768px) {
+    .feature {
+        width: 100%;
+    }
+}
+/* Footer */
+footer {
+    background-color: #2b542c;
+    color: #fff;
+    padding: 40px 0;
+    text-align: center;
+    margin-top: 20px;
+}
+
+footer h2 {
+    margin-bottom: 20px;
+    font-size: 24px;
+}
+
+footer p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+footer .social-links {
+    margin-bottom: 20px;
+}
+
+footer .social-links a {
+    margin: 0 10px;
+    display: inline-block;
+}
+
+footer .social-links img {
+    width: 30px;
+    height: 30px;
+    filter: brightness(0) invert(1); /* Makes the social icons white */
+}
+#connect{
+    color: #f9f9f9;
+}
+/* Chatbox Toggle Button */
+.chat-toggle-btn {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    background-color: #269627;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    cursor: pointer;
+    z-index: 1000;
+}
+
+.chatbox {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 300px;
+    background-color: #fff;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 10px;
+    overflow: hidden;
+    display: none; /* Initially hidden */
+    z-index: 1001;
+}
+
+.chat-header {
+    background-color: #22b824;
+    color: #fff;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.chat-header h4 {
+    margin: 0;
+}
+
+#close-chat {
+    cursor: pointer;
+}
+
+.chat-body {
+    padding: 10px;
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.chat-messages {
+    margin-bottom: 10px;
+}
+
+.chat-input {
+    display: flex;
+    gap: 10px;
+}
+
+#chat-input-field {
+    flex-grow: 1;
+    padding: 5px;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+}
+
+#send-chat-btn {
+    padding: 5px 10px;
+    background-color: #2b542c;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
